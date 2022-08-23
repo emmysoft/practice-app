@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { StyleSheet, TextInput, View, Text, Button } from "react-native";
 import Ioncicons from "@expo/vector-icons/Ionicons";
-import ButtonComponent from "./Button";
+import ButtonComponent from "./ButtonComponent";
 
 const UserInput = () => {
   const [username, setUserName] = useState("");
@@ -37,11 +37,11 @@ const UserInput = () => {
       </View>
       <Text style={styles.text}>Forgot Your Password?</Text>
       <View style={styles.button}>
-        <ButtonComponent />
+        <ButtonComponent/>
       </View>
       <Text style={styles.textOption}>OR</Text>
       <View style={styles.googleButton}>
-        <Button title="Login with Google" />
+        <Button title="Login with Google" color="#add8e6"/>
       </View>
       <Text style={styles.finalText}>
         New to Logisitics? <Text style={styles.register}>Register</Text>
@@ -86,12 +86,12 @@ const styles = StyleSheet.create({
     color: "blue",
     marginLeft: "60%",
     padding: 8,
-    fontWeight: "bold",
     fontSize: 13,
+    fontFamily: "fontsOne",
   },
   textOption: {
     alignItems: "center",
-    fontWeight: "lighter",
+    fontFamily: "fontsTwo",
     fontSize: 20,
     padding: 10,
     color: "grey",
@@ -100,8 +100,10 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     width: "100%",
     margin: 5,
-    padding: 5,
-    elevation: 4,
+    paddingVertical: 5,
+    paddingHorizontal: 5,
+    elevation: 2,
+    fontFamily: "fontsOne",
   },
   googleButton: {
     width: "80%",
@@ -111,10 +113,12 @@ const styles = StyleSheet.create({
     color: "grey",
     fontSize: 19,
     padding: 8,
+    fontFamily: "fontsTwo",
+    color: "#000",
   },
   register: {
     color: "blue",
-    fontWeight: "bold",
+    fontFamily: "fontsOne",
     fontSize: 19,
   },
 });
